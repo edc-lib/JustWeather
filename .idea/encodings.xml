@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/edward/justweather/activity/MainActivity.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/edward/justweather/db/JustWeatherDB.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/edward/justweather/db/JustWeatherOpenHelper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/edward/justweather/model/City.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/edward/justweather/model/County.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/edward/justweather/model/Province.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/edward/justweather/util/HttpCallbackListener.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/edward/justweather/util/HttpUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/edward/justweather/util/Utility.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

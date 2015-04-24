@@ -30,12 +30,12 @@ public class HttpUtil {
                         response.append(line);
                     }
                     if (listener != null){
-                        //回调OnFinish()方法
+                        //鍥炶皟OnFinish()鏂规硶
                         listener.onFinish(response.toString());
                     }
                 }catch (Exception e){
                     if (listener != null){
-                        //回调OnError方法
+                        //鍥炶皟OnError鏂规硶
                         listener.onError(e);
                     }
                 } finally {

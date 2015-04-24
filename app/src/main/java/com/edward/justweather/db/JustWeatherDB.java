@@ -72,9 +72,7 @@ public class JustWeatherDB {
                 list.add(province);
             } while (cursor.moveToNext());
         }
-        if (cursor != null){
-            cursor.close();
-        }
+        cursor.close();
         return list;
     }
 
@@ -103,9 +101,7 @@ public class JustWeatherDB {
                 list.add(city);
             } while (cursor.moveToNext());
         }
-        if (cursor != null){
-            cursor.close();
-        }
+        cursor.close();
         return list;
     }
 
@@ -133,9 +129,7 @@ public class JustWeatherDB {
                 county.setCityId(cursor.getInt(cursor.getColumnIndex("city_id")));
                 list.add(county);
             } while (cursor.moveToNext());
-            if (cursor != null){
-                cursor.close();
-            }
+            cursor.close();
         }
         return list;
     }

@@ -5,7 +5,7 @@ package com.edward.justweather.util;
  */
 public interface HttpCallbackListener {
 
-    void onFinish(String s);
+    void onFinish(String response);
 
     void onError(Exception e);
 }
