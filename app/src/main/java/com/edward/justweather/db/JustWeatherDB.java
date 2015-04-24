@@ -15,11 +15,11 @@ import java.util.List;
 
 public class JustWeatherDB {
     /*
-    * Êı¾İ¿âÃû
+    * æ•°æ®åº“å
     * */
     public static final String DB_NAME = "just_weather";
     /*
-    * Êı¾İ¿â°æ±¾
+    * æ•°æ®åº“ç‰ˆæœ¬
     * */
     public static final int VERSION = 1;
 
@@ -28,7 +28,7 @@ public class JustWeatherDB {
     private SQLiteDatabase db;
 
     /*
-    * ½«¹¹½¨·½·¨Ë½ÓĞ»¯
+    * å°†æ„å»ºæ–¹æ³•ç§æœ‰åŒ–
     * */
 
     private JustWeatherDB(Context context) {
@@ -36,7 +36,7 @@ public class JustWeatherDB {
         db = dbHelper.getWritableDatabase();
     }
     /*
-    * »ñÈ¡JustWeatherDBµÄÊµÀı
+    * è·å–JustWeatherDBçš„å®ä¾‹
     * */
     public synchronized static JustWeatherDB getInstance(Context context){
         if (justWertherDB == null){
@@ -46,7 +46,7 @@ public class JustWeatherDB {
     }
 
     /*
-    * ½«provinceÊµÀı´æ´¢µ½Êı¾İ¿â
+    * å°†provinceå®ä¾‹å­˜å‚¨åˆ°æ•°æ®åº“
     * */
     public void saveProvince(Province province){
         if (province != null){
@@ -58,7 +58,7 @@ public class JustWeatherDB {
     }
 
     /*
-    * ´ÓÊı¾İ¿â¶ÁÈ¡È«¹úËùÓĞÊ¡·İĞÅÏ¢
+    * ä»æ•°æ®åº“è¯»å–å…¨å›½æ‰€æœ‰çœä»½ä¿¡æ¯
     * */
     public List<Province> loadProvinces(){
         List<Province> list = new ArrayList<>();
@@ -78,7 +78,7 @@ public class JustWeatherDB {
         return list;
     }
 
-    /*½«CityÊµÀı´æ´¢µ½Êı¾İ¿â*/
+    /*å°†Cityå®ä¾‹å­˜å‚¨åˆ°æ•°æ®åº“*/
     public void saveCity(City city){
         if (city != null){
             ContentValues values = new ContentValues();
@@ -89,7 +89,7 @@ public class JustWeatherDB {
         }
     }
 
-    /*´ÓÊı¾İ¿â¶ÁÈ¡Ä³Ê¡ÏÂËùÓĞ³ÇÊĞĞÅÏ¢*/
+    /*ä»æ•°æ®åº“è¯»å–æŸçœä¸‹æ‰€æœ‰åŸå¸‚ä¿¡æ¯*/
     public List<City> loadCities(int provinceId){
         List<City> list = new ArrayList<>();
         Cursor cursor = db.query("City",null,"province_id = ?",new String[]{String.valueOf(provinceId)},null,null,null);
@@ -109,7 +109,7 @@ public class JustWeatherDB {
         return list;
     }
 
-    /*½«CountyÊµÀı´æ´¢µ½Êı¾İ¿â*/
+    /*å°†Countyå®ä¾‹å­˜å‚¨åˆ°æ•°æ®åº“*/
     public void saveCounty(County county){
         if (county != null){
             ContentValues values = new ContentValues();
@@ -120,7 +120,7 @@ public class JustWeatherDB {
         }
     }
 
-    /*´ÓÊı¾İ¿â¶ÁÈ¡Ä³³ÇÊĞÏÂËùÓĞµÄÏØĞÅÏ¢*/
+    /*ä»æ•°æ®åº“è¯»å–æŸåŸå¸‚ä¸‹æ‰€æœ‰çš„å¿ä¿¡æ¯*/
     public List<County> loadCounties(int cityId){
         List<County> list = new ArrayList<>();
         Cursor cursor = db.query("County",null,"city_id = ?",new String[]{String.valueOf(cityId)},null,null,null);
